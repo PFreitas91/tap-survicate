@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "created_at": {
+        "type": "string"
+      },
+      "enabled": {
+        "type": "binary"
+      },
+      "responses": {
+        "type": "integer"
+      },
+      "launch": {
+        "type": "object",
+        "properties": {
+          "start_at": {
+            "type": ["string", "null"]
+          },
+          "end_at": {
+            "type": ["string", "null"]
+          },
+          "responses_limit": {
+            "type": ["integer", "null"]
+          }
+        }
+      }
+    },
+    "required": ["id", "created_at"]
+  }
