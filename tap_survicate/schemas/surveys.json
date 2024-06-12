@@ -14,7 +14,7 @@
         "type": "string"
       },
       "enabled": {
-        "type": "binary"
+        "type": "boolean"
       },
       "responses": {
         "type": "integer"
