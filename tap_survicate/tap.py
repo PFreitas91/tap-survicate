@@ -16,15 +16,15 @@ class Tapsurvicate(Tap):
             secret=True,
             description="The token to authenticate against the API service",
         ),
-        th.Property(
-            "start_date",
-            th.DateTimeType,
-            description="The earliest record date to sync",
-        ),
+        # th.Property(
+        #     "start_date",
+        #     th.DateTimeType,
+        #     description="The earliest record date to sync",
+        # ),
         th.Property(
             "api_url",
             th.StringType,
-            default="https://data-api.survicate.com/v2",
+            default="https://data-api.survicate.com/v2/",
             description="The URL for the API service",
         ),
     ).to_dict()
