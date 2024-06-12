@@ -61,10 +61,10 @@ class SurvicateStream(RESTStream):
         if next_page_token:
             params["start"] = next_page_token.split("start=")[-1].split("&")[0]
             params["items_per_page"] = 20 
-        elif self.config.get("start_date"):
-            params["start"]  = self.config("start_date")
-        else:
-            params["start"] = DEFAULT_START_DATE
+        # elif self.config.get("start_date"):
+        #     params["start"]  = self.config("start_date")
+        # else:
+        #     params["start"] = DEFAULT_START_DATE
         if self.replication_key:
             params["sort"] = "asc"
             params["order_by"] = self.replication_key
