@@ -29,4 +29,4 @@ plugins:
     pip_url: target-jsonl
     config:
       destination_path: output
-      custom_name: test.json
+      custom_name: test

@@ -40,26 +40,26 @@ class ResponsesStream(SurvicateStream):
         row["survey_id"] = context["survey_id"]
         return row
 
-#     def get_child_context(self, record: dict, context: dict | None) -> dict:
-#         context = context or {}
-#         context["respondent__uuid"] = record["respondent"]["uuid"]
+    def get_child_context(self, record: dict, context: dict | None) -> dict:
+        context = context or {}
+        context["respondent_uuid"] = record["respondent"]["uuid"]
 
-#         return super().get_child_context(record, context) 
-
-
+        return super().get_child_context(record, context) 
 
 
-# class RespondentsStream(SurvicateStream):
-#     """A stream for the respondents endpoint."""
 
-#     name = "respondents"
-#     path = "respondents/{respondent__uuid}/attributes"
-#     schema_filepath = SCHEMAS_DIR / "respondents.json"
-#     parent_stream_type = ResponsesStream
-#     context = {}
 
-#     # def post_process(self, row: dict, context: dict) -> dict | None:
-#     #     # Example: Add respondent's UUID from context if not already present
+class RespondentsStream(SurvicateStream):
+    """A stream for the respondents endpoint."""
 
-#     #     row["respondent__uuid"] = context["respondent__uuid"]
-#     #     return row
+    name = "respondents"
+    path = "respondents/{respondent_uuid}/attributes"
+    schema_filepath = SCHEMAS_DIR / "respondents.json"
+    parent_stream_type = ResponsesStream
+    context = {}
+
+    def post_process(self, row: dict, context: dict) -> dict | None:
+        # Example: Add respondent's UUID from context if not already present
+
+        row["respondent_uuid"] = context["respondent_uuid"]
+        return row

@@ -1,25 +1,14 @@
 {
   "type": "object",
-  "description": "Schema for API response including user attributes",
   "properties": {
-    "data": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer"
-          },
-          "name": {
-            "type": "string"
-          },
-          "value": {
-            "type": "string"
-          }
-        },
-        "required": ["id", "name", "value"]
-      }
+    "id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
     }
-
   }
 }
