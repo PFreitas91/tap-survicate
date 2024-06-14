@@ -34,7 +34,7 @@ class ResponsesStream(SurvicateStream):
     schema_filepath = SCHEMAS_DIR / "responses.json"
     parent_stream_type = SurveysStream
     primary_keys = ["uuid"]
-    # context = {}
+    context = {}
 
     def post_process(self, row: dict, context: dict) -> dict | None:
         row["survey_id"] = context["survey_id"]
@@ -59,7 +59,6 @@ class RespondentsStream(SurvicateStream):
     context = {}
 
     def post_process(self, row: dict, context: dict) -> dict | None:
-        # Example: Add respondent's UUID from context if not already present
 
         row["respondent_uuid"] = context["respondent_uuid"]
         return row
