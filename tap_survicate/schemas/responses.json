@@ -22,7 +22,7 @@
       "language": {
         "type": "string"
       },
-      "answers": {
+      "questions": {
         "type": "array",
         "items": {
           "type": "object",

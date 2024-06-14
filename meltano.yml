@@ -27,3 +27,6 @@ plugins:
   - name: target-jsonl
     variant: andyh1203
     pip_url: target-jsonl
+    config:
+      destination_path: output
+      custom_name: test

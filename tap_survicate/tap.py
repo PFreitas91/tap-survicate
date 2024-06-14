@@ -34,6 +34,7 @@ class Tapsurvicate(Tap):
         return [
             streams.SurveysStream(self),
             streams.ResponsesStream(self),
+            streams.RespondentsStream(self)
         ]
     
 if __name__ == "__main__":
