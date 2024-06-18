@@ -13,5 +13,6 @@
     "value": {
       "type": "string"
     }
-  }
+  },
+  "required": ["id"]
 }
