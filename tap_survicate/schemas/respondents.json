@@ -4,6 +4,9 @@
     "id": {
       "type": "integer"
     },
+    "respondent_uuid": {
+      "type": "string"
+    },
     "name": {
       "type": "string"
     },
