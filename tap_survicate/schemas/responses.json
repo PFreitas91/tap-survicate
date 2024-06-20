@@ -19,7 +19,7 @@
     "language": {
       "type": "string"
     },
-    "questions": {
+    "answers": {
       "type": "array",
       "items": {
         "type": "object",
@@ -41,9 +41,41 @@
               },
               "comment": {
                 "type": ["string", "null"]
+              },
+              "rating": {
+                "type": ["integer", "null"]
+              },
+              "tag": {
+                "type": ["string", "null"]
+              },
+              "action_performed": {
+                "type": ["boolean", "null"]
               }
-            },
-            "required": ["id", "content"]
+            }
+          },
+          "answers": {
+            "type": ["array", "null"],
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "content": {
+                  "type": "string"
+                },
+                "comment": {
+                  "type": ["string", "null"]
+                },
+                "score": {
+                  "type": ["string", "null"]
+                },
+                "rank": {
+                  "type": ["integer", "null"]
+                }
+              },
+              "required": ["id", "content"]
+            }
           },
           "fields": {
             "type": "array",
