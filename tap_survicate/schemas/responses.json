@@ -4,6 +4,9 @@
     "uuid": {
       "type": "string"
     },
+    "survey_id": {
+      "type": "string"
+    },
     "collected_at": {
       "type": "string"
     },
