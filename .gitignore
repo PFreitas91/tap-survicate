@@ -2,7 +2,8 @@
 **/.secrets/*
 
 # Ignore meltano internal cache and sqlite systemdb
-
+.myenv/
+myenv/
 .meltano/
 
 # Byte-compiled / optimized / DLL files
